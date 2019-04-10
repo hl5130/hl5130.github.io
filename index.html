@@ -1,0 +1,2314 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN,en,default">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+<meta name="keywords" content="ai、AI、java、Java、Android、安卓、树莓派">
+<meta property="og:type" content="website">
+<meta property="og:title" content="爱折腾的 ~ Boy ~">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="爱折腾的 ~ Boy ~">
+<meta property="og:description" content="AI技术、Java技术、Android技术、树莓派玩家">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="爱折腾的 ~ Boy ~">
+<meta name="twitter:description" content="AI技术、Java技术、Android技术、树莓派玩家">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>爱折腾的 ~ Boy ~</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">爱折腾的 ~ Boy ~</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">就是爱折腾，就是爱技术，就是爱我家芳芳</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-主页 menu-item-active">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>主页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-标签">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-分类">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-归档">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-关于">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/hl5130" class="github-corner" title="GitHub" aria-label="GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/Android-NDK-开发入门（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/10/Android-NDK-开发入门（一）/" class="post-title-link" itemprop="url">Android NDK 开发入门（一）</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-10 15:28:11 / 修改时间：17:03:06" itemprop="dateCreated datePublished" datetime="2019-04-10T15:28:11+08:00">2019-04-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>NDK开发适用于音频、视频、3D图形、相机驱动等开发。</p>
+<h2 id="开发工具简介"><a href="#开发工具简介" class="headerlink" title="开发工具简介"></a>开发工具简介</h2><ul>
+<li>Android NDK：是AndroidStudio的原生开发工具包，允许使用C和C++代码</li>
+<li>CMake：一款外部构建工具，可与Gradle搭配使用来构建原生库。如果只使用ndk-build，就不需要此组件</li>
+<li>LLDB：用来调试原生代码<h2 id="开发工具下载"><a href="#开发工具下载" class="headerlink" title="开发工具下载"></a>开发工具下载</h2></li>
+</ul>
+<ol>
+<li>打开 SDK Manager</li>
+<li>点击 SDK Tools 标签</li>
+<li>选中 LLDB、CMake 和 NDK</li>
+<li>点击 Apply，然后在弹出式对话框中点击 OK</li>
+<li>安装完成，点击 Finish，然后点击 OK</li>
+</ol>
+<h1 id="创建支持-C-C-的新项目"><a href="#创建支持-C-C-的新项目" class="headerlink" title="创建支持 C/C++ 的新项目"></a>创建支持 C/C++ 的新项目</h1><h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><ul>
+<li>Mac 系统</li>
+<li>Android Studio 3.3.2</li>
+<li>Gradle 版本：gradle-4.10.1-all</li>
+</ul>
+<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><p>因为使用的是 Android Studio 3.3.2，在创建新项目的时候没有 <code>Include C++ Support</code> 这个选项了，所以现在先创建基础项目，再关联C/C++</p>
+<ol>
+<li>创建基础项目</li>
+<li>创建新的原生源文件，并添加到项目中</li>
+<li>创建 CMake 构建脚本，将原生源代码构建到库中</li>
+<li>Gradl 与原生库关联</li>
+</ol>
+<h3 id="创建新的原生源文件"><a href="#创建新的原生源文件" class="headerlink" title="创建新的原生源文件"></a>创建新的原生源文件</h3><p>在应用模块的主源代码集中创建一个包含新建原生源文件的<code>cpp/</code>目录，步骤如下：</p>
+<ol>
+<li>选择 Project 视图</li>
+<li>导航到 <code>自己模块 &gt; src &gt; main</code> ,在 <code>main</code> 目录中创建一个新的文件夹<code>cpp</code></li>
+<li>在<code>cpp</code>目录中创建<code>C/C++</code>文件；创建此文件时可以选择创建标头文件</li>
+</ol>
+<h3 id="创建-CMake-构建脚本"><a href="#创建-CMake-构建脚本" class="headerlink" title="创建 CMake 构建脚本"></a>创建 CMake 构建脚本</h3><p>CMake 构建脚本是一个纯文本文件，您必须将其命名为 <code>CMakeLists.txt</code>。这里只介绍了基本命令</p>
+<ol>
+<li>选择 Project 视图</li>
+<li>在自己模块的根目录下创建文件，命名<code>CMakeLists.txt</code></li>
+<li><p>配置脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 设置 CMake 的最低版本</span><br><span class="line">cmake_minimum_required(VERSION 3.4.1)</span><br><span class="line"></span><br><span class="line"># Specifies a library name, specifies whether the library is STATIC or</span><br><span class="line"># SHARED, and provides relative paths to the source code. You can</span><br><span class="line"># define multiple libraries by adding multiple add.library() commands,</span><br><span class="line"># and CMake builds them for you. When you build your app, Gradle</span><br><span class="line"># automatically packages shared libraries with your APK.</span><br><span class="line"></span><br><span class="line">add_library( # Specifies the name of the library. 这个库的名字</span><br><span class="line">        main</span><br><span class="line"></span><br><span class="line">        # Sets the library as a shared library. 这个库的类型</span><br><span class="line">        SHARED</span><br><span class="line"></span><br><span class="line">        # Provides a relative path to your source file(s). 源文件的路径</span><br><span class="line">        src/main/cpp/main.cpp)</span><br><span class="line"></span><br><span class="line"># Specifies a path to native header files. 标头文件的路径</span><br><span class="line">include_directories(src/main/cpp/include/)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后生成的原生库，是有命名规范的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lib库名称.so</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Gradle-与原生库关联"><a href="#Gradle-与原生库关联" class="headerlink" title="Gradle 与原生库关联"></a>Gradle 与原生库关联</h3><p>要将 Gradle 关联到您的原生库，您需要提供一个指向 CMake 或 ndk-build 脚本文件的路径。在您构建应用时，Gradle 会以依赖项的形式运行 CMake 或 ndk-build，并将共享的库打包到您的 APK 中。Gradle 还使用构建脚本来了解要将哪些文件添加到您的 Android Studio 项目中，以便您可以从 Project 窗口访问这些文件。如果您的原生源文件没有构建脚本，则需要先创建 CMake 构建脚本，然后再继续。</p>
+<p>将 Gradle 关联到原生项目后，Android Studio 会更新 Project 窗格以在 cpp 组中显示您的源文件和原生库，在 External Build Files 组中显示您的外部构建脚本。</p>
+<p>注：更改 Gradle 配置时，请确保通过点击工具栏中的 Sync Project  应用更改。此外，如果在将 CMake 或 ndk-build 脚本文件关联到 Gradle 后再对其进行更改，您应当从菜单栏中选择 Build &gt; Refresh Linked C++ Projects，将 Android Studio 与您的更改同步。</p>
+<p>关联步骤：</p>
+<ol>
+<li>从 IDE 左侧打开 Project 窗格并选择 Android 视图</li>
+<li>右键点击您想要关联到原生库的模块（例如 app 模块），并从菜单中选择 Link C++ Project with Gradle</li>
+<li>选择 CMake，请使用 Project Path 旁的字段为您的外部 CMake 项目指定 CMakeLists.txt 脚本文件</li>
+<li>点击OK就可以了</li>
+</ol>
+<h2 id="检测是否成功"><a href="#检测是否成功" class="headerlink" title="检测是否成功"></a>检测是否成功</h2><p>所有工作完成之后，打包APK，对APK进行分析，发现在<code>lib</code>目录下有CPU架构文件夹，每一个文件夹中都有<code>libmain.so</code>文件，就说明成功了。<br>步骤如下：</p>
+<ol>
+<li>Build &gt; Build Bundle(s)/ APK(S) &gt; Buidl APK(S)</li>
+<li>等待打包完成，点开<code>Anaylze APK</code></li>
+<li>出现的窗体中，打开<code>lib</code>目录，打开其中一个CPU架构目录(例如x86)，就会看见<code>libmain.so</code></li>
+</ol>
+<h1 id="利用-JNI-调用原生库"><a href="#利用-JNI-调用原生库" class="headerlink" title="利用 JNI 调用原生库"></a>利用 JNI 调用原生库</h1><p>JNI是Java Native Interface的缩写，它提供了若干的API实现了Java和其他语言的通信（主要是C&amp;C++）</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>以上面的原生库为例子，介绍 JNI</p>
+<h3 id="源文件-main-cpp"><a href="#源文件-main-cpp" class="headerlink" title="源文件 main.cpp"></a>源文件 main.cpp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;jni.h&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line"></span><br><span class="line">extern &quot;C&quot; JNIEXPORT jstring</span><br><span class="line"></span><br><span class="line">JNICALL</span><br><span class="line">Java_com_hongliang_ndkdemo_NDKMainHelper_getNDKPrint(JNIEnv *env, jobject /* this */) &#123;</span><br><span class="line">    std::string hello = &quot;NDKDemo&quot;;</span><br><span class="line">    return env-&gt;NewStringUTF(hello.c_str());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>#include &lt;jni.h&gt;</code> 声明此文件要使用 jni 的内容</li>
+<li><code>#include &lt;string&gt;</code> 因为需要使用到 String，所以要声明</li>
+<li><code>Java_com_hongliang_ndkdemo_NDKMainHelper_hello</code> 这个是最重要的，因为是有命名规范的：<code>Java_包名_类名_方法名</code>。可以理解为调用com.hongliang.ndkdemo包下NDKMainHelper类的hello方法，实际是调用 main.cpp 的 <code>Java_com_hongliang_ndkdemo_NDKMainHelper_hello</code> 函数</li>
+</ul>
+<h3 id="Java-文件-NDKMainHelper"><a href="#Java-文件-NDKMainHelper" class="headerlink" title="Java 文件 NDKMainHelper"></a>Java 文件 NDKMainHelper</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package com.hongliang.ndkdemo;</span><br><span class="line">public class NDKMainHelper &#123;</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        System.loadLibrary(&quot;main&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public native String getNDKPrint();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>static 静态块中加载原生库 <code>System.loadLibrary(&quot;main&quot;)</code>，使用的是库名</li>
+<li>native 标志此方法是调用原生库的函数</li>
+</ul>
+<h3 id="Activity文件"><a href="#Activity文件" class="headerlink" title="Activity文件"></a>Activity文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">package com.hongliang.ndkdemo;</span><br><span class="line"></span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.util.Log;</span><br><span class="line"></span><br><span class="line">public class MainActivity extends AppCompatActivity &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        NDKMainHelper ndkMainHelper = new NDKMainHelper();</span><br><span class="line">        String msg = ndkMainHelper.getNDKPrint();</span><br><span class="line">        Log.e(&quot;MainActivity&quot;, msg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在 MainActivity 中创建 NDKMainHelper 的对象，并调用 getNDKPrint 方法，此时就会调用 main.cpp 的函数了。</li>
+<li>最终打印出来的是：NDKDemo</li>
+</ul>
+<h1 id="文献"><a href="#文献" class="headerlink" title="文献"></a>文献</h1><p><a href="https://developer.android.google.cn/studio/projects/add-native-code" target="_blank" rel="noopener">官方文档</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/OkHttpClient的Timeout解析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/08/OkHttpClient的Timeout解析/" class="post-title-link" itemprop="url">OkHttpClient的Timeout解析</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-08 16:33:50" itemprop="dateCreated datePublished" datetime="2019-04-08T16:33:50+08:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-10 15:02:30" itemprop="dateModified" datetime="2019-04-10T15:02:30+08:00">2019-04-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>okHttp3要设置OkHttpClient的TimeOut，需要通过<code>OkHttpClient.Builder</code>来设置。如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">OkHttpClient client = new OkHttpClient.Builder()</span><br><span class="line">                .connectTimeout(15,TimeUnit.SECONDS)</span><br><span class="line">                .readTimeout(20, TimeUnit.SECONDS)</span><br><span class="line">                .writeTimeout(20, TimeUnit.SECONDS)</span><br><span class="line">                .cache(new Cache(file,10*1024*1024))</span><br><span class="line">                .build();</span><br></pre></td></tr></table></figure></p>
+<p>有时候我很疑惑，<code>connectTimeout</code>、<code>readTimeout</code>、<code>writeTimeout</code>，到底有什么用？<br>下面来讲解一下：</p>
+<h1 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h1><p>首先简单说一下<code>socket</code>，因为<code>okHttp</code>是基于<code>socket</code>实现的。</p>
+<h2 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h2><p>socket是对网络传输层TCP/IP协议的封装，便于程序员进行使用。它定义了一些基本的函数：create、listen、connect、accept、send、read和write等等。其中<code>connect</code>对应于TCP协议中的三次握手建立连接，<code>read</code>对应于建立连接之后客户端读取服务器数据的操作，<code>write</code>对应于建立连接之后客户端向服务器写入数据的操作。只需要了解这些就可以了，如果要深入了解，请查看《<a href>TCP/IP、Http、Socket区别</a>》这一篇文章。</p>
+<h2 id="connectTimeout"><a href="#connectTimeout" class="headerlink" title="connectTimeout"></a>connectTimeout</h2><p>connectTimeout 既连接超时。精确来讲就是客户端和服务器要在设置的时间内进行三次握手并建立连接，如果在此时间内没有建立连接，那就是连接超时。<br>作用：限制客户端和服务器建立连接的时间，减少服务器的压力，释放更多资源供其他连接使用。</p>
+<h2 id="readTimeout"><a href="#readTimeout" class="headerlink" title="readTimeout"></a>readTimeout</h2><p>readTimeout 既读取超时。精确来讲就是客户端要在规定的时间内从服务器读取到数据内容，注意不是读取所有数据花费的时间。例如服务器有一个大小为100字节的数据，只要客户端在 readTimeout时间内能够从服务器读取到1字节的数据，就不会超时。举一个更生动的例子：用桶接水，打开水龙头(三次握手成功建立了连接)，有水流出来，无论大小(获取到的数据流大小)，但都是有水的；此时停水了(相当于出现了网络状况，导致读取不到数据了)，从现在开始计算到readTimeout时间，还没有水出来的话(说明读取超时了)，就关闭水龙头(关闭连接)。</p>
+<h2 id="writeTimeout"><a href="#writeTimeout" class="headerlink" title="writeTimeout"></a>writeTimeout</h2><p>writeTimeout 既写入超时。精确来讲就是客户端向服务器上传文件时，要在规定的时间向服务器发送数据。比如我要发10M的数据，结果只发了1M出去，网络就一直丢包，从这个时间起就开始算超时，但是只要有新的数据发出去了那么超时就重新计算。说白了超时就是每次最多干等的时间。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/okhttp3解析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/08/okhttp3解析/" class="post-title-link" itemprop="url">okhttp3解析</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-08 14:43:15" itemprop="dateCreated datePublished" datetime="2019-04-08T14:43:15+08:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-10 15:02:30" itemprop="dateModified" datetime="2019-04-10T15:02:30+08:00">2019-04-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/okhttp3基本使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/08/okhttp3基本使用/" class="post-title-link" itemprop="url">okhttp3基本使用</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-08 14:42:59" itemprop="dateCreated datePublished" datetime="2019-04-08T14:42:59+08:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-10 15:02:30" itemprop="dateModified" datetime="2019-04-10T15:02:30+08:00">2019-04-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>从Android4.4开始，系统内置了OkHttp。 okHttp3 有重大改版，例如 FormEncodingBuilder 类没有了，取而代之的是 FormBody。</p>
+<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><ul>
+<li>创建 OkHttpClient</li>
+<li>创建 Request</li>
+<li>创建 Call</li>
+<li>调用 Call 的 enqueue() 或者 execute()</li>
+</ul>
+<h1 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">// 1、Request</span><br><span class="line">Request.Builder builder = new Request.Builder();</span><br><span class="line">builder.url(&quot;http://www.hong1969.com&quot;);</span><br><span class="line">builder.method(&quot;GET&quot;,null);</span><br><span class="line">Request request = builder.build();</span><br><span class="line"></span><br><span class="line">// 2、 HttpClient</span><br><span class="line">OkHttpClient client = new OkHttpClient();</span><br><span class="line"></span><br><span class="line">// 3、Call</span><br><span class="line">Call call = client.newCall(request);</span><br><span class="line"></span><br><span class="line">// 4、异步请求</span><br><span class="line">call.enqueue(new Callback() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onFailure(@NonNull Call call, @NonNull IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException &#123;</span><br><span class="line">        ResponseBody responseBody = response.body();</span><br><span class="line">        if (null != responseBody) &#123;</span><br><span class="line">            String string = responseBody.string();</span><br><span class="line">            Log.e(LOG_TAG,&quot;返回结果：&quot;+string);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Log.e(LOG_TAG,&quot;ResponseBody is null&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// 1、FormBody</span><br><span class="line">FormBody.Builder formBodyBuilder = new FormBody.Builder();</span><br><span class="line">formBodyBuilder.add(&quot;username&quot;,&quot;admin&quot;);</span><br><span class="line">formBodyBuilder.add(&quot;password&quot;,&quot;123456&quot;);</span><br><span class="line">FormBody formBody = formBodyBuilder.build();</span><br><span class="line"></span><br><span class="line">// 2、Request</span><br><span class="line">Request.Builder builder = new Request.Builder();</span><br><span class="line">builder.url(&quot;http://distributionapi.1000fun.com/login/userlogin&quot;);</span><br><span class="line">builder.method(&quot;POST&quot;,formBody);</span><br><span class="line">Request request = builder.build();</span><br><span class="line"></span><br><span class="line">// 3、 HttpClient</span><br><span class="line">OkHttpClient client = new OkHttpClient();</span><br><span class="line"></span><br><span class="line">// 4、Call</span><br><span class="line">Call call = client.newCall(request);</span><br><span class="line"></span><br><span class="line">// 5、异步请求</span><br><span class="line">call.enqueue(new Callback() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onFailure(@NonNull Call call, @NonNull IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException &#123;</span><br><span class="line">        ResponseBody responseBody = response.body();</span><br><span class="line">        if (null != responseBody) &#123;</span><br><span class="line">            String string = responseBody.string();</span><br><span class="line">            Log.e(LOG_TAG,&quot;返回结果：&quot;+string);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Log.e(LOG_TAG,&quot;ResponseBody is null&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="异步上传文件"><a href="#异步上传文件" class="headerlink" title="异步上传文件"></a>异步上传文件</h1><ul>
+<li>上传文件也是<code>POST</code>请求，并使用<code>RequestBody</code>设置请求体</li>
+<li>上传文件的格式通过<code>MediaType</code>来设置。例如<code>MediaType mediaType = MediaType.parse(&quot;text/x-markdown; charset=utf-8&quot;)</code>就是用来设置上传txt文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">// 1、文件路径</span><br><span class="line">String filePath = &quot;&quot;;</span><br><span class="line">if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))&#123;</span><br><span class="line">    filePath = Environment.getExternalStorageDirectory().getAbsolutePath();</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br><span class="line">// 2、文件</span><br><span class="line">File file = new File(filePath,&quot;wangshu.txt&quot;);</span><br><span class="line"></span><br><span class="line">// 3、RequestBody，上传的是txt格式的文件</span><br><span class="line">MediaType mediaType = MediaType.parse(&quot;text/x-markdown; charset=utf-8&quot;);</span><br><span class="line">RequestBody requestBody = RequestBody.create(mediaType, file);</span><br><span class="line"></span><br><span class="line">// 4、Request</span><br><span class="line">Request.Builder requestBuilder = new Request.Builder();</span><br><span class="line">requestBuilder.url(&quot;https://api.github.com/markdown/raw&quot;)</span><br><span class="line">        .post(requestBody)</span><br><span class="line">        .build();</span><br><span class="line">Request request = requestBuilder.build();</span><br><span class="line"></span><br><span class="line">// 5、HttpClient</span><br><span class="line">OkHttpClient client = new OkHttpClient();</span><br><span class="line"></span><br><span class="line">// 6、Call</span><br><span class="line">Call call = client.newCall(request);</span><br><span class="line">call.enqueue(new Callback() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onFailure(@NonNull Call call, @NonNull IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        if (e instanceof FileNotFoundException)&#123;</span><br><span class="line">            Log.e(LOG_TAG,&quot;该文件不存在&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException &#123;</span><br><span class="line">        ResponseBody responseBody = response.body();</span><br><span class="line">        if (null != responseBody) &#123;</span><br><span class="line">            String string = responseBody.string();</span><br><span class="line">            Log.e(LOG_TAG,&quot;返回结果：&quot;+string);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Log.e(LOG_TAG,&quot;ResponseBody is null&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="异步下载文件"><a href="#异步下载文件" class="headerlink" title="异步下载文件"></a>异步下载文件</h1><ul>
+<li>可以不用设置请求方式</li>
+<li>通过IO流对<code>Response</code>进行处理</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">// 1、Request</span><br><span class="line">String url = &quot;https://www.baidu.com/img/bd_logo1.png&quot;;</span><br><span class="line">Request request = new Request.Builder().url(url).build();</span><br><span class="line"></span><br><span class="line">// 2、OkHttpClient 设置</span><br><span class="line">OkHttpClient client = new OkHttpClient();</span><br><span class="line"></span><br><span class="line">// 3、Call</span><br><span class="line">Call call = client.newCall(request);</span><br><span class="line">call.enqueue(new Callback() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onFailure(@NonNull Call call, @NonNull IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        if (e instanceof FileNotFoundException)&#123;</span><br><span class="line">            Log.e(LOG_TAG,&quot;该文件不存在&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onResponse(@NonNull Call call, @NonNull Response response) &#123;</span><br><span class="line">        ResponseBody responseBody = response.body();</span><br><span class="line">        if (null != responseBody) &#123;</span><br><span class="line">            InputStream inputStream = responseBody.byteStream();</span><br><span class="line">            String filePath;</span><br><span class="line">            try &#123;</span><br><span class="line">                if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))&#123;</span><br><span class="line">                    filePath = Environment.getExternalStorageDirectory().getAbsolutePath();</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    filePath = context.getFilesDir().getAbsolutePath();</span><br><span class="line">                &#125;</span><br><span class="line">                File file = new File(filePath,&quot;wangshu.jpg&quot;);</span><br><span class="line">                FileOutputStream fileOutputStream = new FileOutputStream(file);</span><br><span class="line">                byte[] buffer = new byte[1024];</span><br><span class="line">                int len = 0;</span><br><span class="line">                while ( (len = inputStream.read(buffer)) != -1)&#123;</span><br><span class="line">                    fileOutputStream.write(buffer,0,len);</span><br><span class="line">                &#125;</span><br><span class="line">                fileOutputStream.flush();</span><br><span class="line"></span><br><span class="line">            &#125; catch (IOException e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Log.e(LOG_TAG,&quot;ResponseBody is null&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="异步上传Multipart文件"><a href="#异步上传Multipart文件" class="headerlink" title="异步上传Multipart文件"></a>异步上传Multipart文件</h1><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>在上传文件的时候，需要同时上传参数</p>
+<h2 id="基本步骤-1"><a href="#基本步骤-1" class="headerlink" title="基本步骤"></a>基本步骤</h2><ul>
+<li>使用<code>MultipartBody.Builder</code>创建<code>RequestBody</code></li>
+<li>创建<code>Request</code>，并包含<code>RequestBody</code></li>
+<li>其他步骤不变</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">// 1、设置MediaType</span><br><span class="line">final MediaType MEDIA_TYPE_PNG = MediaType.parse(&quot;image/png&quot;);</span><br><span class="line"></span><br><span class="line">// 2、设置 RequestBody</span><br><span class="line">RequestBody requestBody = new MultipartBody.Builder()</span><br><span class="line">        .setType(MultipartBody.FORM)</span><br><span class="line">        .addFormDataPart(&quot;title&quot;,&quot;wangshu&quot;)</span><br><span class="line">        // 第一个参数是key值，第二个参数上传文件的名字，第三个参数是上传的文件</span><br><span class="line">        .addFormDataPart(&quot;image&quot;,&quot;wangshu.png&quot;, RequestBody.create(MEDIA_TYPE_PNG, new File(&quot;/storage/emulated/0/wangshu.png&quot;)))</span><br><span class="line">        .build();</span><br><span class="line"></span><br><span class="line">// 3、设置 Request</span><br><span class="line">Request request = new Request.Builder()</span><br><span class="line">        .url(&quot;https://.....&quot;)</span><br><span class="line">        .post(requestBody)</span><br><span class="line">        .build();</span><br><span class="line"></span><br><span class="line">// 4、设置 OkHttpClient</span><br><span class="line">OkHttpClient okHttpClient = new OkHttpClient();</span><br><span class="line"></span><br><span class="line">// 5、 Call</span><br><span class="line">Call call = okHttpClient.newCall(request);</span><br><span class="line">call.enqueue(new Callback() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onFailure(@NonNull Call call, @NonNull IOException e) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/okhttp3配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/08/okhttp3配置/" class="post-title-link" itemprop="url">okhttp3配置</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-08 14:36:37" itemprop="dateCreated datePublished" datetime="2019-04-08T14:36:37+08:00">2019-04-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-10 15:02:30" itemprop="dateModified" datetime="2019-04-10T15:02:30+08:00">2019-04-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="依赖导入"><a href="#依赖导入" class="headerlink" title="依赖导入"></a>依赖导入</h1><p>在 <code>module</code> 的 <code>build.gradle</code> 文件中添加下面的代码，并重新build<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">implementation &apos;com.squareup.okhttp3:okhttp:3.14.0&apos;</span><br><span class="line">implementation &apos;com.squareup.okio:okio:2.2.2&apos;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Build-时出现的问题"><a href="#Build-时出现的问题" class="headerlink" title="Build 时出现的问题"></a>Build 时出现的问题</h1><p>如果 build 失败，并出现了下面的问题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Caused by: com.android.builder.dexing.DexArchiveBuilderException: Failed to process /Users/hongliang/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.14.0/c3a9efd10f26a802da2c47dbe54a8d4c44a6019f/okhttp-3.14.0.jar</span><br><span class="line">Caused by: com.android.builder.dexing.DexArchiveBuilderException: Error while dexing.</span><br><span class="line">Caused by: com.android.tools.r8.CompilationFailedException: Compilation failed to complete</span><br><span class="line">Caused by: com.android.tools.r8.utils.AbortException: Error: Static interface methods are only supported starting with Android N (--min-api 24): okhttp3.Request okhttp3.Authenticator.lambda$static$0(okhttp3.Route, okhttp3.Response)</span><br></pre></td></tr></table></figure></p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>Java8之后才支持lambda和静态接口方法，所以需要指定使用Java8编译</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>在 <code>module</code> 的 <code>build.gradle</code> 文件中添加下面的代码，并重新build<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">  ...</span><br><span class="line">  compileOptions &#123;</span><br><span class="line">    sourceCompatibility JavaVersion.VERSION_1_8</span><br><span class="line">    targetCompatibility JavaVersion.VERSION_1_8</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="okHttp3系列文章"><a href="#okHttp3系列文章" class="headerlink" title="okHttp3系列文章"></a>okHttp3系列文章</h1><p><a href="http://localhost:4000/2019/04/08/okhttp3基本使用" target="_blank" rel="noopener">okHttp3-基本使用</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/02/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-02 21:01:28" itemprop="dateCreated datePublished" datetime="2019-04-02T21:01:28+08:00">2019-04-02</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/树莓派制作复古游戏机/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/02/树莓派制作复古游戏机/" class="post-title-link" itemprop="url">树莓派制作复古游戏机</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-02 12:53:33 / 修改时间：21:01:28" itemprop="dateCreated datePublished" datetime="2019-04-02T12:53:33+08:00">2019-04-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/树莓派/" itemprop="url" rel="index"><span itemprop="name">树莓派</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>各位90后的小伙子们，是否还记得“魂斗罗”、“超级玛丽亚”、“双截龙”等一系列的游戏呐。这篇文章教你制作一个复古游戏机，可以运行 nes、neogeo等20几种游戏模拟器，让你满足儿时的游戏梦想。</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>制作复古游戏机的核心是：树莓派、MicroSD卡、系统镜像、游戏手柄；下面会依次做介绍。</p>
+<h2 id="树莓派"><a href="#树莓派" class="headerlink" title="树莓派"></a>树莓派</h2><p>树莓派是一块开发板，可以理解为微型计算机。笔者使用的树莓派3b+型号，它接口丰富——4个USB接口、一个HDMI、一个千兆网口，还配有蓝牙、WIFI等。<br>关于树莓派的详细介绍，请点击<a href="https://www.raspberrypi.org" target="_blank" rel="noopener">树莓派官网</a>查看。</p>
+<h2 id="MicroSD卡"><a href="#MicroSD卡" class="headerlink" title="MicroSD卡"></a>MicroSD卡</h2><p>因为树莓派是没有存储内存的，所以需要使用 MicroSD卡作为存储内存，用来烧录镜像和放置游戏ROM，并且内存至少16GB起步，这样才能愉快地放非常非常多的游戏。笔者使用的是闪迪Class10。</p>
+<h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><p>可以烧录在树莓派上的游戏镜像有很多，笔者推荐的是recalbox。</p>
+<ul>
+<li>Recalbox 官方网站：<a href="https://www.recalbox.com" target="_blank" rel="noopener">https://www.recalbox.com</a></li>
+<li>镜像下载地址：<a href="https://archive.recalbox.com" target="_blank" rel="noopener">https://archive.recalbox.com</a>，选择 “Raspberry Pi 3 / 3 B+” 就可以了</li>
+<li>镜像下载有点慢，因此笔者在百度云盘分享了出来，取货码【e6mh】，<a href="https://pan.baidu.com/s/1bB2QEBaYKOSb_oFgL7vhKA" target="_blank" rel="noopener">快速到达</a></li>
+</ul>
+<h2 id="制作工具"><a href="#制作工具" class="headerlink" title="制作工具"></a>制作工具</h2><h3 id="Mac电脑下的镜像制作"><a href="#Mac电脑下的镜像制作" class="headerlink" title="Mac电脑下的镜像制作"></a>Mac电脑下的镜像制作</h3><p>在Mac电脑下，使用 balenaEtcher 做镜像烧录操作。下载地址：<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">https://www.balena.io/etcher/</a> 选择 “Etcher for macOS” 就可以了</p>
+<ul>
+<li>第一步使用 Mac 的磁盘工具对 MicroSD卡 进行格式化，选择“MS-DOS (FAT32)”格式。</li>
+<li>格式化成功之后，打开 balenaEtcher 软件，点击“select image”按钮选择我们下载的 recalbox 镜像，再选择我们的 MicroSD卡，最后点击“Flash”就可以了，此时镜像开始烧录。</li>
+<li>镜像烧录完成，将 MicroSD卡插入树莓派就可以运行了。</li>
+</ul>
+<h3 id="Windows电脑下的镜像制作"><a href="#Windows电脑下的镜像制作" class="headerlink" title="Windows电脑下的镜像制作"></a>Windows电脑下的镜像制作</h3><p>再下载 balenaEtcher 时，选择“ Etcher for Windows x64 (64-bit) (Installer) ” 就可以了。除了格式化的工具不一样以外，其他步骤都一样。</p>
+<h2 id="游戏ROM的放入"><a href="#游戏ROM的放入" class="headerlink" title="游戏ROM的放入"></a>游戏ROM的放入</h2><p>一个要求：需要树莓派和电脑在同一网段的局域网中。</p>
+<ul>
+<li>在没有修改游戏系统的名字的前提下，电脑中会有一个 RECALBOX 的共享文件。</li>
+<li>根据步骤进入各个模拟器rom文件夹：share -&gt; roms；roms文件夹中包含了所有模拟器的rom文件夹，将游戏放入对应的rom文件夹中就可以了。</li>
+<li>重启系统，就可以看到你喜爱的游戏了。</li>
+</ul>
+<h2 id="装备"><a href="#装备" class="headerlink" title="装备"></a>装备</h2><p>玩游戏怎么能没有手柄呐，推荐两个手柄：</p>
+<ul>
+<li>PS3游戏手柄，蓝牙匹配，完美运行，索尼大法就是好！</li>
+<li>北通USB游戏手柄！</li>
+</ul>
+<p>显示器：en～ 用过28寸4K的，完美运行。不知道放到电视上会有多大的马赛克，😂</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/header.gif" alt="洪亮">
+            
+              <p class="site-author-name" itemprop="name">洪亮</p>
+              <div class="site-description motion-element" itemprop="description">AI技术、Java技术、Android技术、树莓派玩家</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/hl5130" title="GitHub &rarr; https://github.com/hl5130" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:281332545@qq.com" title="E-Mail &rarr; mailto:281332545@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 1969 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">沈公主</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+  <div>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1276874265'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1276874265%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+  </div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.0.1"></script>
+
+  <script src="/js/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
