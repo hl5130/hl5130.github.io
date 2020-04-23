@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="AI技术、Java技术、Android技术、树莓派玩家">
-<meta name="keywords" content="ai、AI、java、Java、Android、安卓、树莓派">
+  <meta name="description" content="AI、Android、树莓派玩家">
+<meta name="keywords" content="ai、AI、java、Java、Android、安卓、树莓派、kotlin">
 <meta property="og:type" content="website">
-<meta property="og:title" content="爱折腾的 ~ Boy ~">
+<meta property="og:title" content="山城小子">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="爱折腾的 ~ Boy ~">
-<meta property="og:description" content="AI技术、Java技术、Android技术、树莓派玩家">
+<meta property="og:site_name" content="山城小子">
+<meta property="og:description" content="AI、Android、树莓派玩家">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爱折腾的 ~ Boy ~">
-<meta name="twitter:description" content="AI技术、Java技术、Android技术、树莓派玩家">
+<meta name="twitter:title" content="山城小子">
+<meta name="twitter:description" content="AI、Android、树莓派玩家">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>爱折腾的 ~ Boy ~</title>
+  <title>山城小子</title>
   
 
 
@@ -184,13 +184,13 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">爱折腾的 ~ Boy ~</span>
+        <span class="site-title">山城小子</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
     
       
-        <p class="site-subtitle">就是爱折腾，就是爱技术，就是爱我家芳芳</p>
+        <p class="site-subtitle">技术在于专研，完美在于匠心</p>
       
     
     
@@ -391,16 +391,332 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/Android-NDK-开发入门（一）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/第一章：类型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="洪亮">
-      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
       <meta itemprop="image" content="/images/header.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+      <meta itemprop="name" content="山城小子">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/04/23/第一章：类型/" class="post-title-link" itemprop="url">第一章：类型</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-23 11:15:15 / 修改时间：23:18:52" itemprop="dateCreated datePublished" datetime="2020-04-23T11:15:15+08:00">2020-04-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Kotlin/" itemprop="url" rel="index"><span itemprop="name">Kotlin</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h1><h2 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h2><p>Kotlin 中的布尔类型是 <code>Boolean</code>，与Java的<code>boolean</code>性质是一样的，只有<code>True</code>与<code>False</code>两个值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">val a: Boolean = false</span><br><span class="line">val b: Boolean = true</span><br></pre></td></tr></table></figure></p>
+<h2 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h2><p>Kotlin 中的Number类型，实际就是Java中的数值类型，即整型、浮点型、字节</p>
+<table>
+<thead>
+<tr>
+<th>类型分类</th>
+<th>类型</th>
+<th>大小(位)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浮点型-双精度</td>
+<td>Double</td>
+<td>64</td>
+</tr>
+<tr>
+<td>浮点型-单精度</td>
+<td>Float</td>
+<td>32</td>
+</tr>
+<tr>
+<td>长整型</td>
+<td>Long</td>
+<td>64</td>
+</tr>
+<tr>
+<td>整型</td>
+<td>Int</td>
+<td>32</td>
+</tr>
+<tr>
+<td>短整型</td>
+<td>Short</td>
+<td>16</td>
+</tr>
+<tr>
+<td>字节</td>
+<td>Byte</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">val a: Double = 2.0</span><br><span class="line">val a1 = 2.0 // 默认是Double类型</span><br><span class="line">val b: Float = 2.0</span><br><span class="line">val b1 = 2.0F // 用F结尾表示Float类型</span><br><span class="line">val c: Long = 123</span><br><span class="line">val c1 = 123L // 用L结尾表示Long类型</span><br><span class="line">val d: Int = 123</span><br><span class="line">val d1 = 123 // 默认是Int类型</span><br></pre></td></tr></table></figure>
+<h2 id="Char类型"><a href="#Char类型" class="headerlink" title="Char类型"></a>Char类型</h2><p>字符类型，占两个字节，表示一个16位的Unicode字符，使用单引号表示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">val aChar: Char = &apos;a&apos;</span><br><span class="line">val aChar1 = &apos;a&apos;</span><br><span class="line">val bChar: Char = &apos;\u000f&apos; // \u000f表示Unicode码</span><br></pre></td></tr></table></figure></p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\t</td>
+<td>制表符</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>光标后退一个字符</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>光标回到行首</td>
+</tr>
+<tr>
+<td>\‘</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>\“</td>
+<td>双引号（用于字符串）</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>\$</td>
+<td>美元符号，Kotli支持美元符号开头的字符串模板（用于字符串）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="装箱与拆箱"><a href="#装箱与拆箱" class="headerlink" title="装箱与拆箱"></a>装箱与拆箱</h2><p>在Java中有基本类型和装箱类型，例如<code>int</code>和<code>Integer</code>。但是在Kotlin中没有这样的说法，因为Kotlin的类型就是Java基本类型和装箱类型的合体，例如<code>Int</code>,<code>Double</code>等，到底是基本类型还是装箱类型是由编译器根据情况来选择的。</p>
+<h2 id="基本类型转换"><a href="#基本类型转换" class="headerlink" title="基本类型转换"></a>基本类型转换</h2><p>在Java中，可以将小的基本类型隐式转换成大的基本类型，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int intA = 123</span><br><span class="line">long longB = intA // 正确，小转大</span><br><span class="line">short shortC = intA // 不正确，大转小</span><br></pre></td></tr></table></figure></p>
+<p>但是，在Kotlin中是不能隐式转换的，只能通过显示转换</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>使用方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Double</td>
+<td>toDouble()</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>toFloat()</td>
+</tr>
+<tr>
+<td>Long</td>
+<td>toLong()</td>
+</tr>
+<tr>
+<td>Int</td>
+<td>toInt()</td>
+</tr>
+<tr>
+<td>Short</td>
+<td>toShort()</td>
+</tr>
+<tr>
+<td>Byte</td>
+<td>toByte()</td>
+</tr>
+<tr>
+<td>Char</td>
+<td>toChar()</td>
+</tr>
+</tbody>
+</table>
+<p>例子:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">val aInt: Int = 5</span><br><span class="line">val bLong: Long = aInt.toLong()</span><br></pre></td></tr></table></figure></p>
+<h1 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h1><h2 id="字符串String"><a href="#字符串String" class="headerlink" title="字符串String"></a>字符串String</h2><p>可以理解一串字符，用双引号表示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val aString: String = &quot;HelloWorld&quot;</span><br></pre></td></tr></table></figure></p>
+<h3 id="比较符"><a href="#比较符" class="headerlink" title="比较符"></a>比较符</h3><p>在kotlin中<code>==</code>相当于Java的<code>equals()</code>方法，即值比较；<br>而<code>===</code>相当于Java的<code>==</code>，即对象的引用比较<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">val aString: String = &quot;a&quot;</span><br><span class="line">val bString: String = &quot;a&quot;</span><br><span class="line">if( aString == bString) // True</span><br><span class="line">if( aString === bString) // False</span><br></pre></td></tr></table></figure></p>
+<h3 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h3><p>使用<code>$</code>标识变量，可以在字符串中直接输入值<br>使用<code>${}</code>标识变量的表达式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">val test: String = &quot;HelloWorld&quot;</span><br><span class="line">print(&quot;This is $test&quot;) // 输出是：This is HelloWorld</span><br><span class="line"></span><br><span class="line">val a: Int = 1</span><br><span class="line">val b: Int = 2</span><br><span class="line">print(&quot;$a + $b = $&#123;a+b&#125;&quot;) // 输出是：1+2=3</span><br></pre></td></tr></table></figure></p>
+<h3 id="原始字符串"><a href="#原始字符串" class="headerlink" title="原始字符串"></a>原始字符串</h3><p>原始字符串的意思就是，你输入的是什么格式，输出就是什么格式，使用<code>&quot;&quot;&quot;</code>表示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">val sss: String = &quot;&quot;&quot;</span><br><span class="line">我是测试</span><br><span class="line">      原始温恩</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">// 输出的是：</span><br><span class="line">我是测试</span><br><span class="line">      原始温恩</span><br></pre></td></tr></table></figure></p>
+<h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h2><p>使用<code>class</code>关键字的是类。只要记住类是一个抽象的概念，对象是这个类的具体实例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Person constructor(var name: String) &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以省略<code>constructor</code>关键字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Person(var name: String) &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果类中没有任何内容，也可以省略<code>{}</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class Person(var name: String)</span><br></pre></td></tr></table></figure></p>
+<p><code>init{}</code>方法是构造方法体<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Person(var name: String) &#123;</span><br><span class="line">    init&#123;</span><br><span class="line">        print(&quot;我是$name&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">val me: Person = Person(&quot;帅哥&quot;)</span><br><span class="line">// 此时会输出：我是帅哥</span><br></pre></td></tr></table></figure></p>
+<p><code>me</code>就是对象，一个具体的实例<br><code>Person</code>就是类，一个抽象的概念</p>
+<h2 id="区间（Range）"><a href="#区间（Range）" class="headerlink" title="区间（Range）"></a>区间（Range）</h2><p>区间，就是数学中的开闭区间；如整型区间<code>IntRange</code>。<br>闭区间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 .. 1024 // [0,1024]</span><br></pre></td></tr></table></figure></p>
+<p>开区间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 until 1024 // [0,1024）</span><br></pre></td></tr></table></figure></p>
+<p>某个数在区间中是否存在<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">intRange.contairs(50) // 判断50是否在区间中存在</span><br><span class="line">50 in intRange // 也是判断50是否在区间中存在</span><br></pre></td></tr></table></figure></p>
+<h2 id="数组（Array）"><a href="#数组（Array）" class="headerlink" title="数组（Array）"></a>数组（Array）</h2><p>数组是一系列的对象，包含了基本数据类型和引用数据类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 基本数据类型 xxArray ,例如：整型数组</span><br><span class="line">val intArray: IntArray = intArrayOf(1,2,3,4)</span><br><span class="line"></span><br><span class="line">// 引用类型数组</span><br><span class="line">val stringArray: Array&lt;String&gt; = arrayOf(&quot;我是&quot;,&quot;睡觉了&quot;)</span><br><span class="line">val personArray: Array&lt;Person&gt; = arrayOf(Person(“人1”),arrayOf(Person(“人2”),arrayOf(Person(“人3”))</span><br></pre></td></tr></table></figure></p>
+<h3 id="注意几个问题"><a href="#注意几个问题" class="headerlink" title="注意几个问题"></a>注意几个问题</h3><ol>
+<li>声明数组的时候，必须添加元素，否则会出异常<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">val intArray: IntArray = intArrayOf() // 此时数组中没有元素</span><br><span class="line">intArray[0] = 1 // 会抛出下标越界，因为 intArray 在声明时没有添加任何元素，所以它的大小是0，并且无法改变。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="空类型与智能类型转换"><a href="#空类型与智能类型转换" class="headerlink" title="空类型与智能类型转换"></a>空类型与智能类型转换</h2><h3 id="空类型"><a href="#空类型" class="headerlink" title="空类型"></a>空类型</h3><p>在Java中，一个变量可以是空，也可以是非空，这就导致我们在使用的时候需要进行非空判断，否则容易出现空指针异常。而在Kotlin中，是分了空与非空的，用<code>?</code>标识<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 可以为空</span><br><span class="line">var nullable: String? = null</span><br><span class="line">// 不可以为空</span><br><span class="line">var notNull: String = &quot;Not&quot;</span><br></pre></td></tr></table></figure></p>
+<p>在使用的时候也是有区别的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nullable.length // 错误，可以为空的变量不可以直接使用</span><br><span class="line">notNull.length // 正确，不为空的变量可以直接使用</span><br><span class="line">nullable?.length // 正确，如果变量是空的就得到null，否则就是变量的大小</span><br><span class="line">nullable!!.length // 正确，意思就是我知道这个变量一定不为空，所以可以直接使用</span><br></pre></td></tr></table></figure></p>
+<p>空类型是Kotlin的一大特色，可以有效地避免空指针异常</p>
+<h3 id="智能类型转换"><a href="#智能类型转换" class="headerlink" title="智能类型转换"></a>智能类型转换</h3><p>意思是编译器会自动根据前置条件判断变量的类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">val nullable: String? = &quot;sss&quot;</span><br><span class="line">if(nullable != null)&#123;</span><br><span class="line">    nullable.length // 正确，因为在if条件中已经知道 nullable 不为空了，所以可以直接使用</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="包（package）"><a href="#包（package）" class="headerlink" title="包（package）"></a>包（package）</h1><ul>
+<li>就是命名空间</li>
+<li>在类中使用其他类，实际使用的是全路径名 <code>com.exmple.data.Order</code></li>
+<li>包的声明必须在非注释代码的第一行</li>
+<li><code>import</code>关键字，用于导入包名，减少在代码中的输入量</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/10/Android-NDK-开发入门（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="山城小子">
     </span>
 
     
@@ -436,7 +752,7 @@
                 
               
 
-              <time title="创建时间：2019-04-10 15:28:11 / 修改时间：17:03:06" itemprop="dateCreated datePublished" datetime="2019-04-10T15:28:11+08:00">2019-04-10</time>
+              <time title="创建时间：2019-04-10 15:28:11 / 修改时间：17:14:12" itemprop="dateCreated datePublished" datetime="2019-04-10T15:28:11+08:00">2019-04-10</time>
             
 
             
@@ -632,12 +948,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="洪亮">
-      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
       <meta itemprop="image" content="/images/header.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+      <meta itemprop="name" content="山城小子">
     </span>
 
     
@@ -811,12 +1127,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="洪亮">
-      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
       <meta itemprop="image" content="/images/header.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+      <meta itemprop="name" content="山城小子">
     </span>
 
     
@@ -983,12 +1299,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="洪亮">
-      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
       <meta itemprop="image" content="/images/header.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+      <meta itemprop="name" content="山城小子">
     </span>
 
     
@@ -1181,12 +1497,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="洪亮">
-      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
       <meta itemprop="image" content="/images/header.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+      <meta itemprop="name" content="山城小子">
     </span>
 
     
@@ -1358,12 +1674,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="洪亮">
-      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
       <meta itemprop="image" content="/images/header.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+      <meta itemprop="name" content="山城小子">
     </span>
 
     
@@ -1505,12 +1821,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="洪亮">
-      <meta itemprop="description" content="AI技术、Java技术、Android技术、树莓派玩家">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
       <meta itemprop="image" content="/images/header.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="爱折腾的 ~ Boy ~">
+      <meta itemprop="name" content="山城小子">
     </span>
 
     
@@ -1709,7 +2025,7 @@
               <img class="site-author-image" itemprop="image" src="/images/header.gif" alt="洪亮">
             
               <p class="site-author-name" itemprop="name">洪亮</p>
-              <div class="site-description motion-element" itemprop="description">AI技术、Java技术、Android技术、树莓派玩家</div>
+              <div class="site-description motion-element" itemprop="description">AI、Android、树莓派玩家</div>
           </div>
 
           
@@ -1719,7 +2035,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1740,7 +2056,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1765,7 +2083,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1829,7 +2149,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 1969 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 1969 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
