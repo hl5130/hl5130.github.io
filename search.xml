@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[第二章：程序结构]]></title>
+    <url>%2F2020%2F04%2F26%2F%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[常量与变量常量val在Kotlin中常量使用val表示，一旦声明并赋值之后，在后续的程序中无法更改。注意一下几点： 运行时常量的写法 1val aa: String = &quot;HelloWord&quot; // 常量 编译器常量的写法，多增加一个const关键字，并且运行速度快于运行时常量 123const val aa: String = &quot;HelloWord&quot;// 与Java等价的代码是public final String aa = &quot;HelloWord&quot; 查看字节码，就能发现两种写法的编译生成的字节码有所不同 123456// 第一种const val aa: String = &quot;HelloWord&quot;var bb = aa// 第二种val aa: String = &quot;HelloWord&quot;var bb = aa 变量var在后续程序中可以更改的变量，用var表示12345var aa: String = &quot;123&quot;aa = &quot;234&quot; // 正确val bb: String = &quot;123&quot;bb = &quot;234&quot; // 错误，常量无法改变值 类型推导在Kotlin中，编译器可以根据变量或者常量的值，推导出它的类型123val aa = &quot;Helloween&quot; // String类型var ins = 123 // Int类型var result = &quot;Hellow&quot;+5 // String类型 函数 function以特定功能组织起来的代码块，与String、Int等一样都是一种类型，它的写法：12fun [函数名]([参数列表]):[返回值类型]&#123;[函数体]&#125;]fun [函数名]([参数列表])=[表达式] 列如：123456// 传入两个整型参数，得到他们的和fun reslut(a1:Int, b1: Int): Int &#123; print(&quot;$&#123;a1+b1&#125;&quot;) return a1+b1&#125;fun reslut(a1:Int, b1: Int) = a1+b1 函数的作用对参数进行一些变化并得到返回值，当函数体内部没有返回值时，使用Unit，它没有任何意义，并且可以省略不写1234567fun aa(): Unit&#123; print(&quot;Hellow&quot;)&#125;fun aa() &#123; // 省略了Unit print(&quot;Hellow&quot;)&#125; 匿名函数 无名氏的函数，如神一般的存在，lambad表达式更能体现出来 fun ([参数列表])...，没有函数名称，但需要有变量接收，比如1val sayHi = fun(name: String) = [print(name)]]]></content>
+      <categories>
+        <category>Kotlin</category>
+      </categories>
+      <tags>
+        <tag>Kotlin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2020%2F04%2F23%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[第一章：类型]]></title>
-    <url>%2F2020%2F04%2F23%2F%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E7%B1%BB%E5%9E%8B%2F</url>
+    <url>%2F2020%2F04%2F23%2F%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%B1%BB%E5%9E%8B%2F</url>
     <content type="text"><![CDATA[基本类型布尔类型Kotlin 中的布尔类型是 Boolean，与Java的boolean性质是一样的，只有True与False两个值。12val a: Boolean = falseval b: Boolean = true Number类型Kotlin 中的Number类型，实际就是Java中的数值类型，即整型、浮点型、字节 类型分类 类型 大小(位) 浮点型-双精度 Double 64 浮点型-单精度 Float 32 长整型 Long 64 整型 Int 32 短整型 Short 16 字节 Byte 8 12345678val a: Double = 2.0val a1 = 2.0 // 默认是Double类型val b: Float = 2.0val b1 = 2.0F // 用F结尾表示Float类型val c: Long = 123val c1 = 123L // 用L结尾表示Long类型val d: Int = 123val d1 = 123 // 默认是Int类型 Char类型字符类型，占两个字节，表示一个16位的Unicode字符，使用单引号表示123val aChar: Char = &apos;a&apos;val aChar1 = &apos;a&apos;val bChar: Char = &apos;\u000f&apos; // \u000f表示Unicode码 转义字符 转义字符 含义 \t 制表符 \b 光标后退一个字符 \n 回车 \r 光标回到行首 \‘ 单引号 \“ 双引号（用于字符串） \\ 反斜杠 \$ 美元符号，Kotli支持美元符号开头的字符串模板（用于字符串） 装箱与拆箱在Java中有基本类型和装箱类型，例如int和Integer。但是在Kotlin中没有这样的说法，因为Kotlin的类型就是Java基本类型和装箱类型的合体，例如Int,Double等，到底是基本类型还是装箱类型是由编译器根据情况来选择的。 基本类型转换在Java中，可以将小的基本类型隐式转换成大的基本类型，例如：123int intA = 123long longB = intA // 正确，小转大short shortC = intA // 不正确，大转小 但是，在Kotlin中是不能隐式转换的，只能通过显示转换 类型 使用方法 Double toDouble() Float toFloat() Long toLong() Int toInt() Short toShort() Byte toByte() Char toChar() 例子:12val aInt: Int = 5val bLong: Long = aInt.toLong() 引用类型字符串String可以理解一串字符，用双引号表示1val aString: String = &quot;HelloWorld&quot; 比较符在kotlin中==相当于Java的equals()方法，即值比较；而===相当于Java的==，即对象的引用比较1234val aString: String = &quot;a&quot;val bString: String = &quot;a&quot;if( aString == bString) // Trueif( aString === bString) // False 字符串模板使用$标识变量，可以在字符串中直接输入值使用${}标识变量的表达式123456val test: String = &quot;HelloWorld&quot;print(&quot;This is $test&quot;) // 输出是：This is HelloWorldval a: Int = 1val b: Int = 2print(&quot;$a + $b = $&#123;a+b&#125;&quot;) // 输出是：1+2=3 原始字符串原始字符串的意思就是，你输入的是什么格式，输出就是什么格式，使用&quot;&quot;&quot;表示1234567val sss: String = &quot;&quot;&quot;我是测试 原始温恩&quot;&quot;&quot;// 输出的是：我是测试 原始温恩 类与对象使用class关键字的是类。只要记住类是一个抽象的概念，对象是这个类的具体实例。1class Person constructor(var name: String) &#123;&#125; 可以省略constructor关键字1class Person(var name: String) &#123;&#125; 如果类中没有任何内容，也可以省略{}1class Person(var name: String) init{}方法是构造方法体12345678class Person(var name: String) &#123; init&#123; print(&quot;我是$name&quot;) &#125;&#125;val me: Person = Person(&quot;帅哥&quot;)// 此时会输出：我是帅哥 me就是对象，一个具体的实例Person就是类，一个抽象的概念 区间（Range）区间，就是数学中的开闭区间；如整型区间IntRange。闭区间10 .. 1024 // [0,1024] 开区间10 until 1024 // [0,1024） 某个数在区间中是否存在12intRange.contairs(50) // 判断50是否在区间中存在50 in intRange // 也是判断50是否在区间中存在 数组（Array）数组是一系列的对象，包含了基本数据类型和引用数据类型123456// 基本数据类型 xxArray ,例如：整型数组val intArray: IntArray = intArrayOf(1,2,3,4)// 引用类型数组val stringArray: Array&lt;String&gt; = arrayOf(&quot;我是&quot;,&quot;睡觉了&quot;)val personArray: Array&lt;Person&gt; = arrayOf(Person(“人1”),arrayOf(Person(“人2”),arrayOf(Person(“人3”)) 注意几个问题 声明数组的时候，必须添加元素，否则会出异常12val intArray: IntArray = intArrayOf() // 此时数组中没有元素intArray[0] = 1 // 会抛出下标越界，因为 intArray 在声明时没有添加任何元素，所以它的大小是0，并且无法改变。 空类型与智能类型转换空类型在Java中，一个变量可以是空，也可以是非空，这就导致我们在使用的时候需要进行非空判断，否则容易出现空指针异常。而在Kotlin中，是分了空与非空的，用?标识1234// 可以为空var nullable: String? = null// 不可以为空var notNull: String = &quot;Not&quot; 在使用的时候也是有区别的1234nullable.length // 错误，可以为空的变量不可以直接使用notNull.length // 正确，不为空的变量可以直接使用nullable?.length // 正确，如果变量是空的就得到null，否则就是变量的大小nullable!!.length // 正确，意思就是我知道这个变量一定不为空，所以可以直接使用 空类型是Kotlin的一大特色，可以有效地避免空指针异常 智能类型转换意思是编译器会自动根据前置条件判断变量的类型1234val nullable: String? = &quot;sss&quot;if(nullable != null)&#123; nullable.length // 正确，因为在if条件中已经知道 nullable 不为空了，所以可以直接使用&#125; 包（package） 就是命名空间 在类中使用其他类，实际使用的是全路径名 com.exmple.data.Order 包的声明必须在非注释代码的第一行 import关键字，用于导入包名，减少在代码中的输入量]]></content>
       <categories>
         <category>Kotlin</category>
@@ -65,11 +81,6 @@
       <tags>
         <tag>okHttp3</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F04%2F02%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
     <title><![CDATA[树莓派制作复古游戏机]]></title>

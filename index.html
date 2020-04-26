@@ -391,7 +391,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/第一章：类型/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/第二章-程序结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="洪亮">
@@ -411,7 +411,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2020/04/23/第一章：类型/" class="post-title-link" itemprop="url">第一章：类型</a>
+                <a href="/2020/04/26/第二章-程序结构/" class="post-title-link" itemprop="url">第二章：程序结构</a>
               
             
           </h1>
@@ -436,12 +436,364 @@
                 
               
 
-              <time title="创建时间：2020-04-23 11:15:15 / 修改时间：23:18:52" itemprop="dateCreated datePublished" datetime="2020-04-23T11:15:15+08:00">2020-04-23</time>
+              <time title="创建时间：2020-04-26 23:07:05" itemprop="dateCreated datePublished" datetime="2020-04-26T23:07:05+08:00">2020-04-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-04-27 00:03:47" itemprop="dateModified" datetime="2020-04-27T00:03:47+08:00">2020-04-27</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Kotlin/" itemprop="url" rel="index"><span itemprop="name">Kotlin</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="常量与变量"><a href="#常量与变量" class="headerlink" title="常量与变量"></a>常量与变量</h1><h2 id="常量val"><a href="#常量val" class="headerlink" title="常量val"></a>常量val</h2><p>在Kotlin中常量使用<code>val</code>表示，一旦声明并赋值之后，在后续的程序中无法更改。注意一下几点：</p>
+<ol>
+<li><p>运行时常量的写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val aa: String = &quot;HelloWord&quot; // 常量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译器常量的写法，多增加一个<code>const</code>关键字，并且运行速度快于运行时常量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const val aa: String = &quot;HelloWord&quot;</span><br><span class="line">// 与Java等价的代码是</span><br><span class="line">public final String aa = &quot;HelloWord&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看字节码，就能发现两种写法的编译生成的字节码有所不同</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 第一种</span><br><span class="line">const val aa: String = &quot;HelloWord&quot;</span><br><span class="line">var bb = aa</span><br><span class="line">// 第二种</span><br><span class="line">val aa: String = &quot;HelloWord&quot;</span><br><span class="line">var bb = aa</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="变量var"><a href="#变量var" class="headerlink" title="变量var"></a>变量var</h2><p>在后续程序中可以更改的变量，用<code>var</code>表示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var aa: String = &quot;123&quot;</span><br><span class="line">aa = &quot;234&quot; // 正确</span><br><span class="line"></span><br><span class="line">val bb: String = &quot;123&quot;</span><br><span class="line">bb = &quot;234&quot; // 错误，常量无法改变值</span><br></pre></td></tr></table></figure></p>
+<h2 id="类型推导"><a href="#类型推导" class="headerlink" title="类型推导"></a>类型推导</h2><p>在Kotlin中，编译器可以根据变量或者常量的值，推导出它的类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">val aa = &quot;Helloween&quot; // String类型</span><br><span class="line">var ins = 123 // Int类型</span><br><span class="line">var result = &quot;Hellow&quot;+5 // String类型</span><br></pre></td></tr></table></figure></p>
+<h1 id="函数-function"><a href="#函数-function" class="headerlink" title="函数 function"></a>函数 function</h1><p>以特定功能组织起来的代码块，与String、Int等一样都是一种类型，它的写法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fun [函数名]([参数列表]):[返回值类型]&#123;[函数体]&#125;]</span><br><span class="line">fun [函数名]([参数列表])=[表达式]</span><br></pre></td></tr></table></figure></p>
+<p>列如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 传入两个整型参数，得到他们的和</span><br><span class="line">fun reslut(a1:Int, b1: Int): Int &#123;</span><br><span class="line">    print(&quot;$&#123;a1+b1&#125;&quot;)</span><br><span class="line">    return a1+b1</span><br><span class="line">&#125;</span><br><span class="line">fun reslut(a1:Int, b1: Int) = a1+b1</span><br></pre></td></tr></table></figure></p>
+<h2 id="函数的作用"><a href="#函数的作用" class="headerlink" title="函数的作用"></a>函数的作用</h2><p>对参数进行一些变化并得到返回值，当函数体内部没有返回值时，使用<code>Unit</code>，它没有任何意义，并且可以省略不写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fun aa(): Unit&#123;</span><br><span class="line">    print(&quot;Hellow&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fun aa() &#123; // 省略了Unit</span><br><span class="line">    print(&quot;Hellow&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><ul>
+<li>无名氏的函数，如神一般的存在，lambad表达式更能体现出来</li>
+<li><code>fun ([参数列表])...</code>，没有函数名称，但需要有变量接收，比如<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val sayHi = fun(name: String) = [print(name)]</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="山城小子">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/04/23/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-23 23:37:12" itemprop="dateCreated datePublished" datetime="2020-04-23T23:37:12+08:00">2020-04-23</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/第一章-类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="山城小子">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/04/23/第一章-类型/" class="post-title-link" itemprop="url">第一章：类型</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-23 11:15:15" itemprop="dateCreated datePublished" datetime="2020-04-23T11:15:15+08:00">2020-04-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-04-26 23:09:07" itemprop="dateModified" datetime="2020-04-26T23:09:07+08:00">2020-04-26</time>
               
             
           </span>
@@ -752,12 +1104,24 @@
                 
               
 
-              <time title="创建时间：2019-04-10 15:28:11 / 修改时间：17:14:12" itemprop="dateCreated datePublished" datetime="2019-04-10T15:28:11+08:00">2019-04-10</time>
+              <time title="创建时间：2019-04-10 15:28:11" itemprop="dateCreated datePublished" datetime="2019-04-10T15:28:11+08:00">2019-04-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-04-26 23:09:33" itemprop="dateModified" datetime="2020-04-26T23:09:33+08:00">2020-04-26</time>
               
             
           </span>
@@ -1006,7 +1370,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-10 15:02:30" itemprop="dateModified" datetime="2019-04-10T15:02:30+08:00">2019-04-10</time>
+                <time title="修改时间：2020-04-23 23:37:12" itemprop="dateModified" datetime="2020-04-23T23:37:12+08:00">2020-04-23</time>
               
             
           </span>
@@ -1185,7 +1549,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-10 15:02:30" itemprop="dateModified" datetime="2019-04-10T15:02:30+08:00">2019-04-10</time>
+                <time title="修改时间：2020-04-23 23:37:12" itemprop="dateModified" datetime="2020-04-23T23:37:12+08:00">2020-04-23</time>
               
             
           </span>
@@ -1357,7 +1721,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-10 15:02:30" itemprop="dateModified" datetime="2019-04-10T15:02:30+08:00">2019-04-10</time>
+                <time title="修改时间：2020-04-23 23:37:12" itemprop="dateModified" datetime="2020-04-23T23:37:12+08:00">2020-04-23</time>
               
             
           </span>
@@ -1555,7 +1919,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-10 15:02:30" itemprop="dateModified" datetime="2019-04-10T15:02:30+08:00">2019-04-10</time>
+                <time title="修改时间：2020-04-23 23:37:12" itemprop="dateModified" datetime="2020-04-23T23:37:12+08:00">2020-04-23</time>
               
             
           </span>
@@ -1670,153 +2034,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="洪亮">
-      <meta itemprop="description" content="AI、Android、树莓派玩家">
-      <meta itemprop="image" content="/images/header.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="山城小子">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/02/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-02 21:01:28" itemprop="dateCreated datePublished" datetime="2019-04-02T21:01:28+08:00">2019-04-02</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/树莓派制作复古游戏机/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1862,12 +2079,24 @@
                 
               
 
-              <time title="创建时间：2019-04-02 12:53:33 / 修改时间：21:01:28" itemprop="dateCreated datePublished" datetime="2019-04-02T12:53:33+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-02 12:53:33" itemprop="dateCreated datePublished" datetime="2019-04-02T12:53:33+08:00">2019-04-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-04-23 23:37:12" itemprop="dateModified" datetime="2020-04-23T23:37:12+08:00">2020-04-23</time>
               
             
           </span>
@@ -2035,7 +2264,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
