@@ -391,6 +391,212 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/25/第三章-面向对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="洪亮">
+      <meta itemprop="description" content="AI、Android、树莓派玩家">
+      <meta itemprop="image" content="/images/header.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="山城小子">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/05/25/第三章-面向对象/" class="post-title-link" itemprop="url">第三章：面向对象</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-25 23:27:01 / 修改时间：23:30:10" itemprop="dateCreated datePublished" datetime="2020-05-25T23:27:01+08:00">2020-05-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Kotlin/" itemprop="url" rel="index"><span itemprop="name">Kotlin</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h1><ul>
+<li><code>abstract</code> 抽象类</li>
+<li><code>interface</code> 定义接口</li>
+</ul>
+<p>接口：不能有状态，必须被实现之后才能使用<br>抽象类：实现了一部分协议的半成品，可以有状态和方法，必须由子类继承后使用</p>
+<p>他们的共性：</p>
+<ul>
+<li>都不能直接实例化</li>
+<li>有需要子类(实现类)实现的方法</li>
+<li>父类(接口)变量可以接受子类(实现类)的实例赋值</li>
+</ul>
+<p>他们的区别：</p>
+<ul>
+<li>抽象类有状态，接口无状态</li>
+<li>抽象类有方法实现，接口只有无状态的默认实现</li>
+<li>抽象类只能单继承，接口可以多实现（即一个类只能继承一个抽象类，但可以实现多个接口）</li>
+<li>抽象类反映本质，接口体现能力（从设计思想来看）</li>
+</ul>
+<h1 id="数据类-data-class"><a href="#数据类-data-class" class="headerlink" title="数据类 data class"></a>数据类 data class</h1><ul>
+<li>在Java中，使用最常见的是<code>JavaBean</code>，我们都知道一个<code>javabean</code>的类需要实现它的<code>getter/setter</code>、<code>toString()</code>等方法；然而在Kotlin中，只需要使用<code>data class</code> 就可以了，它默认实现了这些方法，不需要手动再添加了。</li>
+<li>通过反编译kotlin生成的字节码，可以发现<code>data class</code>是被<code>final</code>修饰的，因此它不能被继承，不能被修改，并且它没有无参构造函数。就因为这两个原因，导致在使用的时候会出现很多问题，为了解决这些问题，可以使用<code>allopen</code>和<code>noArg</code>这两个插件。<code>allOpen</code>插件在编译器去掉字节码中的<code>final</code>关键字，<code>noArg</code>插件则是增加一个无参构造函数，但是这两个插件都是在编译器有效，所以在写代码的时候还是需要传入参数，不过可以通过反射机制拿到无参构造函数。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// Person类</span><br><span class="line">data class Person(var name: String)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="allOpen和noArg的使用"><a href="#allOpen和noArg的使用" class="headerlink" title="allOpen和noArg的使用"></a>allOpen和noArg的使用</h3><ol>
+<li><p>在项目级<code>build.gradle</code>中添加插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    ext.kotlin_version = &apos;1.3.71&apos;</span><br><span class="line">   </span><br><span class="line">    dependencies &#123;</span><br><span class="line">        classpath &quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;</span><br><span class="line">        // 增加 noArg 插件</span><br><span class="line">        classpath &quot;org.jetbrains.kotlin:kotlin-noarg:$kotlin_version&quot;</span><br><span class="line">        // 增加 allopen 插件</span><br><span class="line">        classpath &quot;org.jetbrains.kotlin:kotlin-allopen:$kotlin_version&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在Module级<code>build.gradle</code>中使用</p>
+</li>
+</ol>
+<ul>
+<li><p>自定义<code>PoKo</code>注解类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">annotation class PoKo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在Module级<code>build.gradle</code>中使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: &apos;kotlin-noarg&apos;</span><br><span class="line">apply plugin: &apos;kotlin-allopen&apos;</span><br><span class="line"></span><br><span class="line">// 使用自定义注解</span><br><span class="line">noArg &#123;</span><br><span class="line">    annotation(&quot;完整的包名.PoKo&quot;)</span><br><span class="line">&#125;</span><br><span class="line">allOpen &#123;</span><br><span class="line">    annotation(&quot;完整的包名.PoKo&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>Person</code>类中添加注解</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@PoKo</span><br><span class="line">data class Person(var name: String)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这样操作之后，编译器在编译期间就知道，<code>Person</code>类不使用<code>final</code>修饰，并添加默认的无参构造函数</p>
+<ul>
+<li>一定要记住clean一下项目，再重新构建</li>
+</ul>
+<h3 id="ComponentN"><a href="#ComponentN" class="headerlink" title="ComponentN"></a>ComponentN</h3><p>在字节码中会有 <code>ComponentN</code> ，有多少个是根据参数的个数来定的，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data class Persion(var name: String, var age: Int) // 有两个参数</span><br><span class="line">val persion = Persion(&quot;Android&quot;,5)</span><br><span class="line">// 那么</span><br><span class="line">persion.component1 // 就是 Android</span><br><span class="line">persion.component2 // 就是 5</span><br><span class="line">// 所以还可以写成</span><br><span class="line">val(name, age) = persion</span><br><span class="line">name // 就是Android</span><br><span class="line">age // 就是5</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/第二章-程序结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -453,7 +659,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-04-27 00:03:47" itemprop="dateModified" datetime="2020-04-27T00:03:47+08:00">2020-04-27</time>
+                <time title="修改时间：2020-04-27 00:12:38" itemprop="dateModified" datetime="2020-04-27T00:12:38+08:00">2020-04-27</time>
               
             
           </span>
@@ -793,7 +999,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-04-26 23:09:07" itemprop="dateModified" datetime="2020-04-26T23:09:07+08:00">2020-04-26</time>
+                <time title="修改时间：2020-04-27 00:12:38" itemprop="dateModified" datetime="2020-04-27T00:12:38+08:00">2020-04-27</time>
               
             
           </span>
@@ -2264,7 +2470,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
